@@ -1,8 +1,8 @@
-## Front End Gulp-Docker Boilerplate (Editora Segmento)
+## HotSite base para eventos
 
 Faça o download ou clone do repositório :)
 
-## Instalação FrontEnd
+## Instalação
                                                                                                                        	
 execute o `npm install` para instalar as dependências de desenvolvimento.
                                                                                                                         
@@ -20,14 +20,6 @@ Quanto terminar o projeto execute o comando abaixo.
 
 Todos os arquivos optimizados estarão na pasta /themes/nome_do_projeto
 
-
-## Inicialização DevOps
-                                                          
-execute o script start.sh e aceite as condições do script
-
-```sh
-$ ./start.sh
-```
 
 ## Licença
 
