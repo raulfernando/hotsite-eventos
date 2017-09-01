@@ -1,0 +1,207 @@
+//background destaque home
+.background-img{
+  background-image: url(http://tevent.lab.themebucket.net/assets/imgs/banner/ban2.jpg);
+  background-position: 50% 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  z-index: -2;
+}
+.background-img::before{
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #000;
+}
+
+/*
+*   Header
+*/
+header{
+  height:100vh;
+}
+
+/*
+*  Logo
+*/
+.logo{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+/*
+*  Menu
+*/
+.menu{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  height: 80px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  @media (max-width: 544px){
+    display:none
+  }
+  @media (max-width: 748px){
+    justify-content: center;
+  }
+}
+.menu-responsivo{
+  display:none;
+  @media (max-width: 544px){
+    display:flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%; /* 100% Full-height */
+    width: 0px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+}
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color:white;
+  @media(min-width: 544px){
+    display: none;
+  }
+}
+.closebtn:hover{
+  color: #CC1E1E;
+  transition: 0.1s all linear;
+}
+.openBtn{
+  position: absolute;
+  font-size: 2em;
+  padding-top: 20px;
+  color: white;
+  @media(min-width: 544px){
+    display: none;
+  }
+}
+.menu-item{
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+.menu-item a{
+  font-family: "Roboto",sans-serif;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.menu-item a:hover{
+  color: #CC1E1E;
+  transition: 0.1s all linear;
+}
+
+/*
+*  Destaque
+*/
+.destaque {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.titulo-destaque{
+  margin-top: 30px;
+  font-size: 1.4em; 
+  text-align: center;
+  color: white;
+  width: 100%;
+  @media(min-width: 580px){
+    font-size: 1.9em;
+  }
+  @media(min-width: 768px){
+    font-size: 2.5em;
+  }
+}
+.subtitulo-destaque{
+  margin-top:0px;
+  font-size: 1em; 
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  width: 100%;
+  @media(min-width: 580px){
+    font-size: 1.5em;
+  }
+  @media(min-width: 768px){
+    font-size: 2.0em;
+  }
+}
+
+/*
+*  Botão Destaque
+*/
+.call-to-action{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center
+}
+
+/*
+*   Contagem dos dias
+*/
+.count-date{
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  color: white;
+  @media(min-width: 768px){
+    justify-content: center;
+  }
+}
+.count-block:not(:last-child){
+  @media(min-width: 768px){
+    margin-right: 50px;
+  }
+}
+.count-date h2{
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+/*
+*   Onde e quando
+*/
+.sobre {
+  margin: 50px 0;
+}
+
+.onde {
+ text-align: center;
+ margin-bottom: 50px;
+}
+
+.quando {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.icon{
+  font-size: 2em;
+}

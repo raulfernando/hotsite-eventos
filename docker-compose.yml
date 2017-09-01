@@ -1,0 +1,51 @@
+version: '2'
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./.data/db:/var/lib/mysql
+      - ./scripts/:/tmp/scripts/
+      - ./db/:/tmp/db/
+    restart: always
+    environment:
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_USER=wordpress
+      - MYSQL_ROOT_PASSWORD=wordpress
+      - MYSQL_PASSWORD=wordpress
+    
+  wordpress:
+    image: wordpress:latest
+    links:
+      - db
+    ports:
+      - 80:80
+    volumes:
+      - ./themes/:/var/www/html/wp-content/themes/
+      - ./plugins/:/var/www/html/wp-content/plugins/
+      - ./scripts/:/tmp/scripts/
+      - ./hotsites/totvs/:/var/www/html/totvs/
+    restart: always
+    environment:
+      - WORDPRESS_DB_HOST=db:3306
+      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_NAME=wordpress
+      - WORDPRESS_DB_PASSWORD=wordpress
+      - WORDPRESS_TABLE_PREFIX=rm_
+    depends_on:
+      - db
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - db:db
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_USER=wordpress
+      - PMA_PASSWORD=wordpress
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - /sessions
+    depends_on:
+      - wordpress
