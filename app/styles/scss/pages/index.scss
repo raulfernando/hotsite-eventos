@@ -263,3 +263,43 @@ header{
 .vh100-titulo h2{
   color: white!important;
 }
+footer{
+  background-color: #222;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.redesSociais ul{
+  list-style: none;
+  display: flex;
+  margin:0;
+}
+.redesSociais li{
+  margin:10px;
+  font-size: 32px;
+}
+.redesSociais li a{
+  color: #717171
+}
+.contato{
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 70vh; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://unsplash.it/1500/999?blur);
+  background-attachment: fixed;
+  margin: 70px 0;
+}
+.contato h2{
+  margin:0px;
+  color: white;
+}
+.contato input{
+  border-radius: 5px;
+}
