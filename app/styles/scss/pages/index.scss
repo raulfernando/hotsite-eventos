@@ -205,3 +205,61 @@ header{
 .icon{
   font-size: 2em;
 }
+
+.fluid-icon i{
+  font-size: 32px;
+  margin: 5px;
+  color: white;
+}
+.fluid-icon ~ div{
+  color: white;
+}
+.palestrante-icon{
+  font-size: 22px;
+  margin: 5px;
+  color:#337ab7;
+}
+.agenda{
+  display: flex;
+  border: 1px solid #424242;
+  margin: 10px 0;
+}
+.agenda-hora{
+  padding: 10px;
+  background: #424242;
+  color: white!important;
+  align-items: center;
+  display: flex;
+}
+.agenda-texto{
+  padding: 10px;
+  text-align: left;
+}
+.vh100{
+  height: 100vh; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(http://tevent.lab.themebucket.net/assets/imgs/banner/ban1.jpg);
+  background-attachment: fixed;
+  margin: 70px 0;
+}
+.destaque-vh{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.destaque-vh::before{
+  position: absolute;
+  height: 100vh;
+  width:100%;
+  z-index: 9;
+  background-color: #000;
+}
+.vh100-titulo{
+  display: flex;
+  color: white!important;
+}
+.vh100-titulo h2{
+  color: white!important;
+}

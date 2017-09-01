@@ -39,6 +39,13 @@ body {
   width: 100%;
   max-width: 990px;
 }
+.container-fluido{
+  box-sizing: border-box;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+}
 
 .linha {
   display: -webkit-box;
@@ -411,4 +418,7 @@ label {
 }
 .u-margin-30{
   margin: 30px 0;
+}
+.u-padding-20{
+  padding: 20px
 }
