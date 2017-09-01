@@ -93,10 +93,10 @@ header{
   transition: 0.1s all linear;
 }
 .openBtn{
-  position: absolute;
+  position: fixed;
   font-size: 2em;
   padding-top: 20px;
-  color: white;
+  color: #6D6D6D;
   @media(min-width: 544px){
     display: none;
   }
